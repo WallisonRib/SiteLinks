@@ -78,6 +78,12 @@ body * {
     top: 50%;
     transform: translateY(-50%);
     left: 0;
+
+    animation: slidebotaovoltar .2s;
+}
+
+#switch button:hover {
+outline: 8px solid  var(--highlight-color);
 }
 
 #switch span {
@@ -92,8 +98,7 @@ body * {
 
 }
 .claro #switch button {
-    left: initial;
-    right: 0;
+    animation: slidebotao .2s forwards;
 }
 
 /* Lista */
@@ -148,4 +153,22 @@ ul li a:hover {
 
 #social-links a:hover {
     background: var(--highlight-color);
+}
+
+/* Animação */
+@keyframes slidebotao{
+    from{
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+@keyframes slidebotaovoltar{
+    from{
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
